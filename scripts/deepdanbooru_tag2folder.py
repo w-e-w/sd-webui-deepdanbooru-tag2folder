@@ -95,7 +95,7 @@ class DeepDanbooruTag2FolderScript():
                     self.source_folder = gr.Textbox(value="", label="Source Folder", elem_id=element_id_prefix("source_folder"))
                     self.target_folder = gr.Textbox(value="", label="Target Folder", elem_id=element_id_prefix("target_folder"))
                     self.auto_type = gr.Dropdown(["None", "Character", "Anime"], value="None", label="Automatic Type", elem_id=element_id_prefix("auto_type"))
-                    self.threshold = gr.Number(value=0.5, label="Threshold", elem_id=element_id_prefix("threshold"), minimum=0, maximum=1)
+                    self.threshold = gr.Number(value=0.5, label="Threshold", elem_id=element_id_prefix("threshold"), minimum=0, maximum=1, step=0.1)
 
                 with gr.Column(scale=1, elem_classes="other elements"):
                     self.rules = gr.Textbox(placeholder=json.dumps(sample, indent=True), lines=10, label="Rules", elem_id=element_id_prefix("rules_json"))
