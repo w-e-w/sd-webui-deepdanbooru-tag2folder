@@ -98,7 +98,7 @@ class DeepDanbooruTag2FolderScript():
                     self.threshold = gr.Number(value=0.5, label="Threshold", elem_id=element_id_prefix("threshold"), minimum=0, maximum=1, step=0.1)
 
                 with gr.Column(scale=1, elem_classes="other elements"):
-                    self.rules = gr.Textbox(placeholder=json.dumps(sample, indent=True), lines=10, label="Rules", elem_id=element_id_prefix("rules_json"))
+                    self.rules = gr.Textbox(placeholder=json.dumps(sample, indent=4), lines=10, label="Rules", elem_id=element_id_prefix("rules_json"))
 
             with gr.Row():
                 self.process_btn = gr.Button(value="Process", elem_id=element_id_prefix("process_btn"))
@@ -241,7 +241,7 @@ class DeepDanbooruTag2FolderScript():
         # Save metrics
         metrics = dict(sorted(metrics.items(), key=lambda x: -x[1]))
         with open(os.path.join(target_folder, "metrics.json"), "w") as _f:
-            _f.write(json.dumps(metrics, indent=True))
+            _f.write(json.dumps(metrics, indent=4))
 
         dd_wrapper.stop()
         print(f"Finish in {time.time() - start_time} segs")

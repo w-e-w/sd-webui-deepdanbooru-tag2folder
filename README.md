@@ -13,12 +13,12 @@ This extension reads the images in the <Source Folder> and then match the image 
 The rules should be written in the following format:
 ```json
 {
-	"subfolder1": {
-		"AND": ["tag1", "tag2"],
-	},
-	"subfolder2": {
-		"OR": ["tag1", "tag2"],
-	}
+    "subfolder1": {
+        "AND": ["tag1", "tag2"]
+    },
+    "subfolder2": {
+        "OR": ["tag1", "tag2"]
+    }
 }
 ```
 
