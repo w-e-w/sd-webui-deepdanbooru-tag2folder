@@ -11,6 +11,7 @@ The <Rules> section is a text area that will be filled using the rules to migrat
 This extension reads the images in the <Source Folder> and then match the image with the rules.
 
 The rules should be written in the following format:
+```json
 {
 	"subfolder1": {
 		"AND": ["tag1", "tag2"],
@@ -19,6 +20,7 @@ The rules should be written in the following format:
 		"OR": ["tag1", "tag2"],
 	}
 }
+```
 
 Depending of the condition "AND" or "OR" will match the image to be moved in the subfolder.
 Using "AND" will match all the tags in the list and using "OR" will match only one tag.
