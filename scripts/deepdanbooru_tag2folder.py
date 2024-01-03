@@ -98,7 +98,7 @@ class DeepDanbooruTag2FolderScript():
                     self.threshold = gr.Number(value=0.5, label="Threshold", elem_id=element_id_prefix("threshold"), minimum=0, maximum=1)
 
                 with gr.Column(scale=1, elem_classes="other elements"):
-                    self.rules = gr.Textbox(value=json.dumps(sample, indent=True), lines=10, label="Rules", elem_id=element_id_prefix("rules_json"))
+                    self.rules = gr.Textbox(placeholder=json.dumps(sample, indent=True), lines=10, label="Rules", elem_id=element_id_prefix("rules_json"))
 
             with gr.Row():
                 self.process_btn = gr.Button(value="Process", elem_id=element_id_prefix("process_btn"))
